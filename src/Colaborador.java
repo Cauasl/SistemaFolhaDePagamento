@@ -1,10 +1,10 @@
 import java.math.BigDecimal;
 
 public abstract class Colaborador {
-    int matricula;
-    String nome;
-    BigDecimal salarioBase = new BigDecimal("2000.00");
-    String tipoColaborador;
+    private int matricula;
+    private String nome;
+    protected BigDecimal salarioBase = new BigDecimal("2000.00");
+    protected String tipoColaborador;
 
     Colaborador(int matricula, String nome) {
         this.matricula = matricula;
