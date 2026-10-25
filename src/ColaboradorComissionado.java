@@ -7,6 +7,8 @@ public class ColaboradorComissionado extends Colaborador{
 
     ColaboradorComissionado(int matricula, String nome, BigDecimal valorVendas, float percentualComissao) {
         super(matricula, nome);
+        if(valorVendas.compareTo(BigDecimal.ZERO)<=0) throw new IllegalArgumentException("Valor das vendas não pode ser menor que zero!");
+        if(percentualComissao < 0) throw new IllegalArgumentException("O percentual não pode ser menor que zero!");
         this.valorVendas = valorVendas;
         this.percentualComissao = percentualComissao;
         super.tipoColaborador = "Comissionado";
