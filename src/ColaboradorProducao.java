@@ -14,6 +14,7 @@ public class ColaboradorProducao extends Colaborador{
     }
 
 
+
     public BigDecimal calcularProdutividade() {
         return valorPorPeca.add(BigDecimal.valueOf(quantidadePecas));
     }

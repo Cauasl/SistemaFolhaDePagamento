@@ -11,14 +11,21 @@ public abstract class Colaborador {
         this.nome = nome;
     }
 
-    public BigDecimal calcularSalarioFinal() {
+    //Getters
+    public String getNome() {
+        return this.nome;
+    }
+    public BigDecimal getSalarioBase() {
         return this.salarioBase;
     }
-
-    public String exibirDados() {
-        return super.toString();
+    public int getMatricula() {
+        return this.matricula;
+    }
+    public String getTipoColaborador() {
+        return this.tipoColaborador;
     }
 
+    //Setters
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -30,5 +37,14 @@ public abstract class Colaborador {
         }else {
             throw new IllegalArgumentException("Valores negaivos não são permitidos!");
         }
+    }
+
+    //Métodos
+    public BigDecimal calcularSalarioFinal() {
+        return this.salarioBase;
+    }
+
+    public String exibirDados() {
+        return super.toString();
     }
 }

@@ -13,7 +13,8 @@ public class ColaboradorComissionado extends Colaborador{
     }
 
     public BigDecimal calcularComissao(){
-        return valorVendas.multiply(BigDecimal.valueOf(percentualComissao)).divide(BigDecimal.valueOf(100));
+        BigDecimal res = valorVendas.multiply(BigDecimal.valueOf(percentualComissao));
+        return res.divide(new BigDecimal("100"));
     }
 
     @Override

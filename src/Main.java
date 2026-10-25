@@ -34,11 +34,11 @@ public class Main {
                     System.out.print("Digite o valor de vendas: ");
                     BigDecimal valorVendas = new BigDecimal(sc.nextLine());
 
-                    System.out.println("Digite o percentual de comissão: ");
+                    System.out.print("Digite o percentual de comissão: ");
                     float percentualComissao = Float.parseFloat(sc.nextLine());
 
                     controle.adicionarColaborador(nome, valorVendas, percentualComissao);
-                    System.out.println("\nColaborador adicionado com sucesso!");
+                    System.out.println("\nColaborador adicionado com sucesso!\n");
                     break;
 
                 case 3:
@@ -54,6 +54,19 @@ public class Main {
                     controle.adicionarColaborador(nome, quantidade, valorPorPeca);
                     System.out.println("\nColaborador adicionado com sucesso!");
                     break;
+
+                case 4:
+                    System.out.println("Segue a folha de pagamento!\n");
+                    System.out.println(controle.gerarFolhaPagamento());;
+                    break;
+
+                case 5:
+                    System.out.println("Segue o resumo da folha de pagamento!\n");
+                    System.out.println(controle.resumoFolhaPagamento());
+
+
+                default:
+                    System.out.println("Opção não existente!");
             }
         }while(opcao != 0);
     }
